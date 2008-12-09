@@ -3,6 +3,7 @@
 %bcond_without	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
+
 %define	pdir	RT
 %define	pnam	Client-REST
 Summary:	RT::Client::REST - talk to RT installation using REST protocol
@@ -10,13 +11,13 @@ Name:		perl-RT-Client-REST
 Version:	0.37
 Release:	1
 # same as perl
-# Source0-md5:	383bf572afdb8040641d4d413ef96476
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
+Source0:	http://search.cpan.org/CPAN/authors/id/D/DM/DMITRI/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	383bf572afdb8040641d4d413ef96476
 URL:		http://search.cpan.org/dist/RT-Client-REST/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Source0:	http://search.cpan.org/CPAN/authors/id/D/DM/DMITRI/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
